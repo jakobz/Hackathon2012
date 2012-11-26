@@ -1,0 +1,49 @@
+.group(data-id=group.id)
+  if data.isAdmin
+    .close-button-wrapper
+      .close-button.remove-group-btn(data-id=group.id)
+  table.group-table
+    tr
+      if data.isAdmin
+        td.label Название группы
+        td.input
+          input.group-name-input(data-id=group.id,value=group.name)
+      else
+        td.title
+          =group.name
+    tr
+      if data.isAdmin
+        td.label Число мест
+        td.input
+          input.group-capacity-input(data-id=group.id,value=group.capacity)
+      else
+        td.capacity
+          - var left = group.capacity - group.persons.length
+          if left == 0 
+            | Мест нет
+          else if (left == 1)
+            | Осталось 1 место
+          else if (left >=2 && left <= 4)
+            = "Осталось " + left + " места"
+          else if (left > 4)
+            = "Осталось " + left + " мест"
+  if group.persons
+    .persons
+      each person in group.persons
+        if !person.isMe
+          table.person
+            tr(data-id=person.id)
+              td(class="mood" + person.mood)
+              td.name #{person.name}
+              td.menu
+                if(!data.isAdmin)
+                  each i in [-1, 0, 1, 2]
+                    -var selected = person.vote == i ? "selected" : "";
+                    a(class="vote" + i + " r" + i + " " + selected, href="#") #{i}
+        else
+          table.person
+            tr.is-me(data-id=person.id)
+              td(class="mood" + person.mood + "_me")
+              td.name #{person.name}
+  else
+    .empty Пока пусто

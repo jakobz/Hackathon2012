@@ -1,0 +1,24 @@
+extends layouts/second
+
+block scripts
+  script(src='javascript/todo.js')
+
+block content
+    .row
+        .span8#todoList
+            each item in items
+                include todoItem  
+
+    form.form-horizontal#newItemForm
+        .control-group
+            // label.control-label(for="newItemInput") New item
+            .controls
+                input#newItemInput(type="text", name="item[name]")
+                |  
+                button.btn.btn-primary(disabled=true)#addButton Add
+    form.form-horizontal#clearForm
+        .control-group
+            .controls
+                button.btn.btn-danger#clearButton Remove all
+
+

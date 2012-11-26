@@ -1,0 +1,19 @@
+if !user
+    form.navbar-form.pull-right(method="POST", action="login")
+        input.span2(type="text", placeholder="Email", name="user[name]")
+        | 
+        input.span2(type="password", placeholder="Password", name="user[password]")
+        | 
+        button.btn(type="submit", name="login") Sign in
+        | 
+        if typeof(message) !== "undefined"
+            #{message}
+    //    button.btn(type="submit", name="register") Register    
+else
+    form.navbar-form.pull-right(method="POST", action="logout")
+        button.btn(type="submit", name="logout") Sign out
+    p.navbar-text.pull-right 
+        | &nbsp
+    p.navbar-text.pull-right Logged in as 
+        a.navbar-link
+            =user.name

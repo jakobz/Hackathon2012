@@ -1,0 +1,284 @@
+@import "compass";
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  background: #b1e4f5;
+}
+
+table {
+  border-collapse: collapse;
+  padding: 0;
+  td {
+    border: none;
+  }
+}
+
+a {
+  color: #fff;
+}
+
+.welcome {
+  width: 400px;
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 5px;
+
+  .logo {
+    width: 118px;
+    height: 123px;
+    margin-top: -120px;
+    margin-left: 132px;
+    background: url(../images/logo.png) center no-repeat;
+    position: absolute;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+  .text {
+    font-size: 14px;
+  }
+  .button {
+    padding-top: 10px;
+  }
+}
+
+.groups {
+  padding: 10px;
+}
+
+.group {
+  float: left;
+  padding: 10px;
+  margin: 10px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, .5) 0 5px 5px;
+  min-width: 300px;
+  .group-table {
+    width: 98%;
+  }
+
+  .title {
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .capacity {
+    text-align: center;
+  }
+
+  .label {
+    width: 150px;
+  }
+
+  .input {
+    input {
+      width: 100%;
+    }
+  }
+  .close-button-wrapper {
+    position: relative;
+  }
+
+  .close-button {
+    display: none;
+    position: absolute;
+    right: 0;
+    margin-top: -30px;
+    margin-right: -32px;
+    cursor: pointer;
+    width: 42px;
+    height: 42px;
+    background: url(../images/close_button.png) no-repeat;
+    &:hover {
+      background-position: -42px 0;
+    }
+  }
+
+  &:hover {
+    .close-button {
+      display: block;
+    }
+
+    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
+  }
+}
+
+.persons {
+  padding: 5px;
+
+  .person {
+    width: 100%;
+    margin-bottom: 5px;
+
+    .name {
+      min-width: 200px;
+    }
+
+    .relation {
+
+    }
+  }
+}
+
+.is-me {
+  .name {
+    font-weight: bolder;
+  }
+}
+
+.vote {
+  display: inline-block;
+  padding: 3px;
+  width: 20px;
+  margin: 3px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  background: none;
+  border: #fff solid 1px;
+  &.selected {
+    color: #fff;
+  }
+}
+
+.vote-2 {
+  @extend .vote;
+  border-color: red;
+  color: red;
+  &.selected {
+    background: red;
+  }
+}
+
+.vote-1 {
+  @extend .vote;
+  border-color: red;
+  color: red;
+  &.selected {
+    background: red;
+  }
+}
+
+.vote0 {
+  @extend .vote;
+  border-color: gray;
+  color: gray;
+  &.selected {
+    background: gray;
+  }
+}
+
+.vote1 {
+  @extend .vote;
+  border-color: green;
+  color: green;
+  &.selected {
+    background: green;
+  }
+}
+
+.vote2 {
+  @extend .vote;
+  border-color: green;
+  color: green;
+  &.selected {
+    background: green;
+  }
+}
+
+.mood {
+  width: 43px;
+  height: 43px;
+  background-repeat: no-repeat;
+}
+
+.mood1 {
+  @extend .mood;
+  background-image: url(../images/mood1.png);
+}
+
+.mood2 {
+  @extend .mood;
+  background-image: url(../images/mood2.png);
+}
+
+.mood1_me {
+  @extend .mood;
+  background-image: url(../images/mood1_me.png);
+}
+
+.mood2_me {
+  @extend .mood;
+  background-image: url(../images/mood2_me.png);
+}
+
+.button {
+  cursor: pointer;
+  text-align: center;
+  border: #c1eb12 solid 1px;
+  border-radius: 8px;
+  font-weight: bolder;
+  @include background-image(linear-gradient(#98d919 0, #5e9f03 50%, #528e03 100%));
+  box-shadow: #346d00 0 0 5px;
+  @include text-shadow(#193d06 0 -1px 0);
+  &:hover {
+    @include background-image(linear-gradient(#669210 0, #3e6902 50%, #375f02 100%));
+    color: #76942d;
+  }
+}
+
+.welcome {
+  box-shadow: rgba(0, 0, 0, .5) 0 5px 5px;
+  .title {
+    padding-top: 10px;
+  }
+
+  .text {
+    padding-bottom: 30px;
+  }
+
+  .buttons {
+    text-align: center;
+    height: 30px;
+  }
+
+  .button {
+    @extend .button;
+    padding: 10px;
+  }
+}
+
+#groups_menu {
+  padding: 20px;
+  .button {
+    display: inline-block;
+    padding: 5px;
+  }
+}
+
+.instruction {
+  background: #fff;
+  color: #000;
+  padding: 20px;
+}
+
+.secret-link {
+  text-align: left;
+  a {
+    display: inline-block;
+    padding-left: 40px;
+    color: #2F6FAD;
+    background: url(../images/link.png) no-repeat;
+    height: 32px;
+    line-height: 32px;
+    font-size: 24px;
+  }
+}

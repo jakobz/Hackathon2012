@@ -1,0 +1,312 @@
+/* line 3, ../../compass/sass/style.scss */
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  background: #b1e4f5;
+}
+
+/* line 12, ../../compass/sass/style.scss */
+table {
+  border-collapse: collapse;
+  padding: 0;
+}
+/* line 15, ../../compass/sass/style.scss */
+table td {
+  border: none;
+}
+
+/* line 20, ../../compass/sass/style.scss */
+a {
+  color: #fff;
+}
+
+/* line 24, ../../compass/sass/style.scss */
+.welcome {
+  width: 400px;
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 5px;
+}
+/* line 31, ../../compass/sass/style.scss */
+.welcome .logo {
+  width: 118px;
+  height: 123px;
+  margin-top: -120px;
+  margin-left: 132px;
+  background: url(../images/logo.png) center no-repeat;
+  position: absolute;
+}
+/* line 40, ../../compass/sass/style.scss */
+.welcome .title {
+  font-size: 30px;
+}
+/* line 43, ../../compass/sass/style.scss */
+.welcome .text {
+  font-size: 14px;
+}
+/* line 46, ../../compass/sass/style.scss */
+.welcome .button {
+  padding-top: 10px;
+}
+
+/* line 51, ../../compass/sass/style.scss */
+.groups {
+  padding: 10px;
+}
+
+/* line 55, ../../compass/sass/style.scss */
+.group {
+  float: left;
+  padding: 10px;
+  margin: 10px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 5px 5px;
+  min-width: 300px;
+}
+/* line 63, ../../compass/sass/style.scss */
+.group .group-table {
+  width: 98%;
+}
+/* line 67, ../../compass/sass/style.scss */
+.group .title {
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+}
+/* line 73, ../../compass/sass/style.scss */
+.group .capacity {
+  text-align: center;
+}
+/* line 77, ../../compass/sass/style.scss */
+.group .label {
+  width: 150px;
+}
+/* line 82, ../../compass/sass/style.scss */
+.group .input input {
+  width: 100%;
+}
+/* line 86, ../../compass/sass/style.scss */
+.group .close-button-wrapper {
+  position: relative;
+}
+/* line 90, ../../compass/sass/style.scss */
+.group .close-button {
+  display: none;
+  position: absolute;
+  right: 0;
+  margin-top: -30px;
+  margin-right: -32px;
+  cursor: pointer;
+  width: 42px;
+  height: 42px;
+  background: url(../images/close_button.png) no-repeat;
+}
+/* line 100, ../../compass/sass/style.scss */
+.group .close-button:hover {
+  background-position: -42px 0;
+}
+/* line 105, ../../compass/sass/style.scss */
+.group:hover {
+  box-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
+}
+/* line 106, ../../compass/sass/style.scss */
+.group:hover .close-button {
+  display: block;
+}
+
+/* line 114, ../../compass/sass/style.scss */
+.persons {
+  padding: 5px;
+}
+/* line 117, ../../compass/sass/style.scss */
+.persons .person {
+  width: 100%;
+  margin-bottom: 5px;
+}
+/* line 121, ../../compass/sass/style.scss */
+.persons .person .name {
+  min-width: 200px;
+}
+
+/* line 132, ../../compass/sass/style.scss */
+.is-me .name {
+  font-weight: bolder;
+}
+
+/* line 137, ../../compass/sass/style.scss */
+.vote, .vote-2, .vote-1, .vote0, .vote1, .vote2 {
+  display: inline-block;
+  padding: 3px;
+  width: 20px;
+  margin: 3px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  background: none;
+  border: #fff solid 1px;
+}
+/* line 147, ../../compass/sass/style.scss */
+.vote.selected, .selected.vote-2, .selected.vote-1, .selected.vote0, .selected.vote1, .selected.vote2 {
+  color: #fff;
+}
+
+/* line 152, ../../compass/sass/style.scss */
+.vote-2 {
+  border-color: red;
+  color: red;
+}
+/* line 156, ../../compass/sass/style.scss */
+.vote-2.selected {
+  background: red;
+}
+
+/* line 161, ../../compass/sass/style.scss */
+.vote-1 {
+  border-color: red;
+  color: red;
+}
+/* line 165, ../../compass/sass/style.scss */
+.vote-1.selected {
+  background: red;
+}
+
+/* line 170, ../../compass/sass/style.scss */
+.vote0 {
+  border-color: gray;
+  color: gray;
+}
+/* line 174, ../../compass/sass/style.scss */
+.vote0.selected {
+  background: gray;
+}
+
+/* line 179, ../../compass/sass/style.scss */
+.vote1 {
+  border-color: green;
+  color: green;
+}
+/* line 183, ../../compass/sass/style.scss */
+.vote1.selected {
+  background: green;
+}
+
+/* line 188, ../../compass/sass/style.scss */
+.vote2 {
+  border-color: green;
+  color: green;
+}
+/* line 192, ../../compass/sass/style.scss */
+.vote2.selected {
+  background: green;
+}
+
+/* line 197, ../../compass/sass/style.scss */
+.mood, .mood1, .mood2, .mood1_me, .mood2_me {
+  width: 43px;
+  height: 43px;
+  background-repeat: no-repeat;
+}
+
+/* line 203, ../../compass/sass/style.scss */
+.mood1 {
+  background-image: url(../images/mood1.png);
+}
+
+/* line 208, ../../compass/sass/style.scss */
+.mood2 {
+  background-image: url(../images/mood2.png);
+}
+
+/* line 213, ../../compass/sass/style.scss */
+.mood1_me {
+  background-image: url(../images/mood1_me.png);
+}
+
+/* line 218, ../../compass/sass/style.scss */
+.mood2_me {
+  background-image: url(../images/mood2_me.png);
+}
+
+/* line 223, ../../compass/sass/style.scss */
+.button, .welcome .button {
+  cursor: pointer;
+  text-align: center;
+  border: #c1eb12 solid 1px;
+  border-radius: 8px;
+  font-weight: bolder;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #98d919), color-stop(50%, #5e9f03), color-stop(100%, #528e03));
+  background-image: -webkit-linear-gradient(#98d919 0%, #5e9f03 50%, #528e03 100%);
+  background-image: -moz-linear-gradient(#98d919 0%, #5e9f03 50%, #528e03 100%);
+  background-image: -o-linear-gradient(#98d919 0%, #5e9f03 50%, #528e03 100%);
+  background-image: linear-gradient(#98d919 0%, #5e9f03 50%, #528e03 100%);
+  box-shadow: #346d00 0 0 5px;
+  text-shadow: #193d06 0 -1px 0;
+}
+/* line 232, ../../compass/sass/style.scss */
+.button:hover {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #669210), color-stop(50%, #3e6902), color-stop(100%, #375f02));
+  background-image: -webkit-linear-gradient(#669210 0%, #3e6902 50%, #375f02 100%);
+  background-image: -moz-linear-gradient(#669210 0%, #3e6902 50%, #375f02 100%);
+  background-image: -o-linear-gradient(#669210 0%, #3e6902 50%, #375f02 100%);
+  background-image: linear-gradient(#669210 0%, #3e6902 50%, #375f02 100%);
+  color: #76942d;
+}
+
+/* line 238, ../../compass/sass/style.scss */
+.welcome {
+  box-shadow: rgba(0, 0, 0, 0.5) 0 5px 5px;
+}
+/* line 240, ../../compass/sass/style.scss */
+.welcome .title {
+  padding-top: 10px;
+}
+/* line 244, ../../compass/sass/style.scss */
+.welcome .text {
+  padding-bottom: 30px;
+}
+/* line 248, ../../compass/sass/style.scss */
+.welcome .buttons {
+  text-align: center;
+  height: 30px;
+}
+/* line 253, ../../compass/sass/style.scss */
+.welcome .button {
+  padding: 10px;
+}
+
+/* line 259, ../../compass/sass/style.scss */
+#groups_menu {
+  padding: 20px;
+}
+/* line 261, ../../compass/sass/style.scss */
+#groups_menu .button {
+  display: inline-block;
+  padding: 5px;
+}
+
+/* line 267, ../../compass/sass/style.scss */
+.instruction {
+  background: #fff;
+  color: #000;
+  padding: 20px;
+}
+
+/* line 273, ../../compass/sass/style.scss */
+.secret-link {
+  text-align: left;
+}
+/* line 275, ../../compass/sass/style.scss */
+.secret-link a {
+  display: inline-block;
+  padding-left: 40px;
+  color: #2F6FAD;
+  background: url(../images/link.png) no-repeat;
+  height: 32px;
+  line-height: 32px;
+  font-size: 24px;
+}

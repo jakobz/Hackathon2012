@@ -1,0 +1,25 @@
+extends layouts/home
+
+block scripts
+  script.
+    $(function(){
+      $("#name_field").focus();
+      $("#go_button").click(function(){
+        $("#go_form").submit();
+      });
+    })();
+
+
+
+block content
+  .welcome
+    .logo
+    .title Привет! 
+    p Кто-то позвал тебя решить один организационный вопросик.
+    p Обещаем, там ненадолго.
+    div(style="padding-bottom: 20px;padding-top: 10px;")
+      form#go_form(action="", method="post")
+        input#name_field(name="username", action="", style="width:100%;height: 30px; font-size: 24px;", placeholder="Ваше имя")
+    .buttons
+      a#go_button.button(style="width:200px;margin: 0 auto;") Начать
+
