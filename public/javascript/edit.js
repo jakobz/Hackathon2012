@@ -67,5 +67,14 @@ $(function(){
         sendVote($(this).parent().parent().attr('data-id'), 2);
     });
 
+    $('.remove-person').live('click', function() {
+        var personId = $(this).parent().parent().attr('data-id');
+        jQuery.post('removePerson', {
+            personId: personId
+        }).done(function(response) {
+            $('#groups').parent().html(response);
+        });
+    });
+
 
 })

@@ -40,6 +40,9 @@
                   each i in [-1, 0, 1, 2]
                     -var selected = person.vote == i ? "selected" : "";
                     a(class="vote" + i + " r" + i + " " + selected, href="#") #{i}
+                else 
+                  a(class='remove-person', href="#", style='color:black') 
+                    | x
         else
           table.person
             tr.is-me(data-id=person.id)

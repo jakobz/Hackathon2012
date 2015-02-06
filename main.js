@@ -8,6 +8,7 @@ module.exports = function(app){
     app.post('/edit/:id/removeGroup', removeGroup);
     app.post('/edit/:id/editGroup', editGroup);
     app.post('/edit/:id/votePerson', votePerson);
+    app.post('/edit/:id/removePerson', removePerson);
     
     var collections = ["users", "pages", "guestLinks"]
     var mongo = require("mongojs")
@@ -177,6 +178,22 @@ module.exports = function(app){
             return data
         })
     }
+
+    function removePerson(req, res) {
+        ajaxModifyPage(req, res, function(data) {
+	    console.log("Request")
+            console.log(JSON.stringify({ person: req.body.personId, page: req.pageId }, null, 2))
+	    console.log("Before")
+            console.log(JSON.stringify(data, null, 2))
+            delete data.persons[req.body.personId]
+	    for(var personId in data.persons) {
+              delete data.persons[personId].votes[req.body.personId]
+	    }
+	    console.log("After")
+            console.log(JSON.stringify(data, null, 2))
+            return data
+        })
+    }	
 
     function editGroup(req, res) {
         ajaxModifyPage(req, res, function(data) {
